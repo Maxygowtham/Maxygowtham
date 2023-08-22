@@ -1,0 +1,19 @@
+
+import random
+
+# Initialize deck and players
+suits = ['Hearts', 'Diamonds', 'Clubs', 'Spades']
+values = ['2', '3', '4', '5', '6', '7', '8', '9', '10', 'J', 'Q', 'K', 'A']
+deck = [{'suit': suit, 'value': value} for suit in suits for value in values]
+random.shuffle(deck)
+
+player1_hand = []
+player2_hand = []
+
+# Deal cards to players
+for _ in range(10):
+    player1_hand.append(deck.pop())
+    player2_hand.append(deck.pop())
+
+print("Player 1's hand:", player1_hand)
+print("Player 2's hand:", player2_hand)
